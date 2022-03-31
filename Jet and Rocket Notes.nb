@@ -205,77 +205,22 @@ Cell["Specific heat of air", "Text",
    3.8576774331763024`*^9}},ExpressionUUID->"4e60b556-17d8-4e84-80db-\
 7231f25d54a1"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{
   SubscriptBox["C", "p"], "=", 
-  NamespaceBox["LinguisticAssistant",
-   DynamicModuleBox[{Typeset`query$$ = "specific heat of air at STP", 
-    Typeset`boxes$$ = RowBox[{"ThermodynamicData", "[", 
-      RowBox[{"\"Air\"", ",", " ", "\"IsochoricHeatCapacity\"", ",", " ", 
-        RowBox[{"{", 
-          RowBox[{
-            RowBox[{"\"Temperature\"", " ", "->", " ", 
-              
-              TemplateBox[{
-               "20", "\"\[Degree]C\"", "degrees Celsius", 
-                "\"DegreesCelsius\""}, "Quantity", SyntaxForm -> Mod]}], ",", 
-            " ", 
-            RowBox[{"\"Pressure\"", " ", "->", " ", 
-              
-              TemplateBox[{"1", "\"atm\"", "atmosphere", "\"Atmospheres\""}, 
-               "Quantity", SyntaxForm -> Mod]}]}], "}"}]}], "]"}], 
-    Typeset`allassumptions$$ = {{
-     "type" -> "Clash", "word" -> "specific heat", "template" -> 
-      "Assuming \"specific heat\" is referring to \
-thermodynamics${separator}Use as ${desc} instead", "count" -> "2", "pulldown" -> 
-      "false", "default" -> 
-      "{\"C\", \"specific heat\"} -> {\"ThermodynamicPropertyPhrase\", \"dflt\
-\"}", "Values" -> {{
-        "name" -> "ThermodynamicPropertyPhrase", "desc" -> 
-         " referring to thermodynamics", "input" -> 
-         "{\"C\", \"specific heat\"} -> {\"ThermodynamicPropertyPhrase\"}"}, {
-        "name" -> "ChemicalPropertyPhrase", "desc" -> 
-         " referring to chemical compounds", "input" -> 
-         "{\"C\", \"specific heat\"} -> {\"ChemicalPropertyPhrase\"}"}}}}, 
-    Typeset`assumptions$$ = {}, Typeset`open$$ = {1}, Typeset`querystate$$ = {
-    "Online" -> True, "Allowed" -> True, "mparse.jsp" -> 
-     1.1379998`7.507687179229096, "Messages" -> {}}}, 
-    DynamicBox[ToBoxes[
-      AlphaIntegration`LinguisticAssistantBoxes["", 4, Automatic, 
-       Dynamic[Typeset`query$$], 
-       Dynamic[Typeset`boxes$$], 
-       Dynamic[Typeset`allassumptions$$], 
-       Dynamic[Typeset`assumptions$$], 
-       Dynamic[Typeset`open$$], 
-       Dynamic[Typeset`querystate$$]], StandardForm],
-     ImageSizeCache->{169.5, {8., 14.5}},
-     TrackedSymbols:>{
-      Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
-       Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
-    DynamicModuleValues:>{},
-    UndoTrackedVariables:>{Typeset`open$$}],
-   BaseStyle->{"Deploy"},
-   DeleteWithContents->True,
-   Editable->False,
-   SelectWithContents->True]}]], "Input",
+  TemplateBox[{"1005", 
+    RowBox[{
+     "\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", "\"kg\"", 
+      "\[ThinSpace]", "\"K\"", "\[InvisibleSpace]", "\")\""}], 
+    "joules per kilogram kelvin difference", 
+    FractionBox["\"Joules\"", 
+     RowBox[{"\"KelvinsDifference\"", " ", "\"Kilograms\""}]]},
+   "Quantity"]}]], "Input",
  CellChangeTimes->{
-  3.855326691657469*^9, {3.857677436688377*^9, 3.857677441998413*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"8b7fa837-e65a-4783-aecd-f5381666f394"],
-
-Cell[BoxData[
- TemplateBox[{"717.6655214170646`", 
-   RowBox[{
-    "\"J\"", "\[InvisibleSpace]", "\"/(\"", "\[InvisibleSpace]", "\"kg\"", 
-     "\[ThinSpace]", "\"K\"", "\[InvisibleSpace]", "\")\""}], 
-   "joules per kilogram kelvin difference", 
-   FractionBox["\"Joules\"", 
-    RowBox[{"\"KelvinsDifference\"", " ", "\"Kilograms\""}]]},
-  "Quantity"]], "Output",
- CellChangeTimes->{{3.8576774534415226`*^9, 3.8576774690527434`*^9}},
- CellLabel->"Out[19]=",ExpressionUUID->"b79d54a5-2a21-4388-88e3-adb79525826e"]
-}, Open  ]]
+  3.855326691657469*^9, {3.857677436688377*^9, 3.857677441998413*^9}, {
+   3.857677475758823*^9, 3.857677484301859*^9}, {3.8576775478004246`*^9, 
+   3.857677553981427*^9}},ExpressionUUID->"8b7fa837-e65a-4783-aecd-\
+f5381666f394"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -287,9 +232,10 @@ Cell["Perfect Gas", "Section",
 
 Cell[CellGroupData[{
 
-Cell["Ideal Gas Law", "Subsection",
- CellChangeTimes->{{3.8575850308348236`*^9, 
-  3.857585032640445*^9}},ExpressionUUID->"1e0d36e9-a06f-4e41-8b9e-\
+Cell["Perfect Gas Law", "Subsection",
+ CellChangeTimes->{{3.8575850308348236`*^9, 3.857585032640445*^9}, {
+  3.857677570648981*^9, 
+  3.8576775715619774`*^9}},ExpressionUUID->"1e0d36e9-a06f-4e41-8b9e-\
 24ba1b1822e9"],
 
 Cell["P = \[Rho]RT", "Text",
@@ -352,14 +298,17 @@ Cell[BoxData[
 0edb0b38b936"],
 
 Cell[BoxData[
- RowBox[{
-  SubscriptBox["C", "p"], "=", 
+ FormBox[
   RowBox[{
-   FractionBox["\[Gamma]", 
-    RowBox[{"\[Gamma]", "-", "1"}]], "R"}]}]], "Input",
+   SubscriptBox["C", "p"], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[Gamma]", " "}], 
+     RowBox[{"\[Gamma]", "-", "1"}]], "R"}]}], TraditionalForm]], "Text",
  CellChangeTimes->{
-  3.855326691657469*^9, {3.85766133510902*^9, 
-   3.85766134783002*^9}},ExpressionUUID->"64fb1ca4-41d2-41f1-bb20-\
+  3.855326691657469*^9, {3.85766133510902*^9, 3.85766134783002*^9}, {
+   3.857677594773978*^9, 
+   3.8576776094092383`*^9}},ExpressionUUID->"64fb1ca4-41d2-41f1-bb20-\
 95d3b8399abb"]
 }, Open  ]],
 
@@ -4727,8 +4676,8 @@ Cell[BoxData[
 }, Open  ]]
 },
 ShowPageBreaks->False,
-WindowSize->{718.5, 735.75},
-WindowMargins->{{-730.5, Automatic}, {Automatic, 0}},
+WindowSize->{1440., 747.75},
+WindowMargins->{{Automatic, 1434}, {Automatic, -6}},
 PrintingCopies->1,
 PrintingStartingPageNumber->1,
 PrintingPageRange->{32000, 32000},
