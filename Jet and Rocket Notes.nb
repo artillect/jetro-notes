@@ -595,7 +595,37 @@ Cell[BoxData[
  CellChangeTimes->{
   3.855326691657469*^9, {3.8576809103871155`*^9, 
    3.8576809193668547`*^9}},ExpressionUUID->"c3fd376a-89f7-41ec-9894-\
-b4c024e779b1"]
+b4c024e779b1"],
+
+Cell["(If heat is added)", "Text",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.857681209864069*^9, 
+   3.8576812146543226`*^9}},ExpressionUUID->"ac556de6-5e1b-48a8-8e65-\
+7a9c9b16a6fd"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["h", "2"], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       SuperscriptBox[
+        SubscriptBox["u", "2"], "2"]}]}], ")"}], "-", 
+    RowBox[{"(", 
+     RowBox[{
+      SubscriptBox["h", "1"], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       SuperscriptBox[
+        SubscriptBox["u", "1"], "2"]}]}], ")"}]}], "=", "\[CapitalDelta]q"}], 
+  TraditionalForm]], "Text",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.85768122273393*^9, 
+   3.8576812890342283`*^9}},ExpressionUUID->"77554479-d231-4d32-89a7-\
+fb097c7d2257"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -4853,8 +4883,8 @@ Cell[BoxData[
 }, Open  ]]
 },
 ShowPageBreaks->False,
-WindowSize->{516.8571428571428, 708.},
-WindowMargins->{{Automatic, -4.285714285714448}, {Automatic, 0}},
+WindowSize->{517.2857142857142, 703.7142857142857},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 PrintingCopies->1,
 PrintingStartingPageNumber->1,
 PrintingPageRange->{32000, 32000},
