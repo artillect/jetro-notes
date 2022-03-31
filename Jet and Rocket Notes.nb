@@ -250,7 +250,8 @@ thermodynamics${separator}Use as ${desc} instead", "count" -> "2", "pulldown" ->
        Dynamic[Typeset`assumptions$$], 
        Dynamic[Typeset`open$$], 
        Dynamic[Typeset`querystate$$]], StandardForm],
-     ImageSizeCache->{169.5, {8., 14.5}},
+     ImageSizeCache->{
+      170.14285714285714`, {8.42857142857143, 14.714285714285715`}},
      TrackedSymbols:>{
       Typeset`query$$, Typeset`boxes$$, Typeset`allassumptions$$, 
        Typeset`assumptions$$, Typeset`open$$, Typeset`querystate$$}],
@@ -352,14 +353,17 @@ Cell[BoxData[
 0edb0b38b936"],
 
 Cell[BoxData[
- RowBox[{
-  SubscriptBox["C", "p"], "=", 
+ FormBox[
   RowBox[{
-   FractionBox["\[Gamma]", 
-    RowBox[{"\[Gamma]", "-", "1"}]], "R"}]}]], "Input",
+   SubscriptBox["C", "p"], "=", 
+   RowBox[{
+    FractionBox[
+     RowBox[{"\[Gamma]", " "}], 
+     RowBox[{"\[Gamma]", "-", "1"}]], "R"}]}], TraditionalForm]], "Text",
  CellChangeTimes->{
-  3.855326691657469*^9, {3.85766133510902*^9, 
-   3.85766134783002*^9}},ExpressionUUID->"64fb1ca4-41d2-41f1-bb20-\
+  3.855326691657469*^9, {3.85766133510902*^9, 3.85766134783002*^9}, {
+   3.8576805092171397`*^9, 
+   3.8576805224477744`*^9}},ExpressionUUID->"64fb1ca4-41d2-41f1-bb20-\
 95d3b8399abb"]
 }, Open  ]],
 
@@ -496,13 +500,102 @@ Cell[BoxData[
      OverscriptBox["u", "\[RightVector]"], " ", 
      RowBox[{"(", 
       RowBox[{
-      "and", " ", "are", " ", "constant", " ", "density", " ", "if", " ", 
-       "velocity"}], ")"}]}]}]}], TraditionalForm]], "Text",
+      "if", " ", "velocity", " ", "and", " ", "density", " ", "are", " ", 
+       "constant"}], ")"}]}]}]}], TraditionalForm]], "Text",
  CellChangeTimes->{
   3.855326691657469*^9, {3.8575855235576854`*^9, 3.8575856396506047`*^9}, {
    3.857585682602724*^9, 3.8575856883027205`*^9}, {3.857671870994448*^9, 
-   3.857671874712447*^9}},ExpressionUUID->"7a88c8a1-ecc4-4afc-b804-\
+   3.857671874712447*^9}, {3.8576806353176756`*^9, 
+   3.8576806402276077`*^9}},ExpressionUUID->"7a88c8a1-ecc4-4afc-b804-\
 e3838725ff3c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Energy flux through a control volume", "Subsection",
+ CellChangeTimes->{{3.8576806999270945`*^9, 
+  3.857680709227372*^9}},ExpressionUUID->"a601affc-8a45-4af5-a72b-\
+8bba15fa14bd"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Influx", "=", 
+   RowBox[{
+    SubscriptBox["\[Rho]", "1"], 
+    SubscriptBox["u", "1"], 
+    RowBox[{
+     SubscriptBox["A", "1"], "(", 
+     RowBox[{
+      SubscriptBox["e", "1"], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       SuperscriptBox[
+        SubscriptBox["u", "1"], "2"]}]}], ")"}]}]}], TraditionalForm]], "Text",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.8576807234775057`*^9, 
+   3.857680806084417*^9}},ExpressionUUID->"3fc30ecc-817c-4620-9077-\
+14d13429fff7"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"Outflux", "=", 
+   RowBox[{
+    SubscriptBox["\[Rho]", "2"], 
+    SubscriptBox["u", "2"], 
+    RowBox[{
+     SubscriptBox["A", "2"], "(", 
+     RowBox[{
+      SubscriptBox["e", "2"], "+", 
+      RowBox[{
+       FractionBox["1", "2"], 
+       SuperscriptBox[
+        SubscriptBox["u", "2"], "2"]}]}], ")"}]}]}], TraditionalForm]], "Text",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.8576807841673965`*^9, 
+   3.857680802286776*^9}},ExpressionUUID->"2f615ba3-fac5-44f3-ac09-\
+6dc3210d55c4"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"Enthalpy", ":", " ", "h"}], "=", 
+   RowBox[{"e", "+", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox["u", "2"]}]}]}], TraditionalForm]], "Text",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.8576808315669556`*^9, 3.8576808514068437`*^9}, {
+   3.85768088740769*^9, 
+   3.8576808893623185`*^9}},ExpressionUUID->"7c5ae75c-30bd-404a-b913-\
+b91778bc4cc6"],
+
+Cell["\<\
+(For a conduit with no heat transfer or forces other than inlet and outlet \
+pressures)\
+\>", "Text",
+ CellChangeTimes->{{3.8576809246970606`*^9, 
+  3.857680953226852*^9}},ExpressionUUID->"6e642ea7-42d0-482e-a37e-\
+d01bff38b1e3"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    SubscriptBox["h", "1"], "+", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox[
+      SubscriptBox["u", "1"], "2"]}]}], "=", 
+   RowBox[{
+    SubscriptBox["h", "2"], "+", 
+    RowBox[{
+     FractionBox["1", "2"], 
+     SuperscriptBox[
+      SubscriptBox["u", "2"], "2"]}]}]}], TraditionalForm]], "Text",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.8576809103871155`*^9, 
+   3.8576809193668547`*^9}},ExpressionUUID->"c3fd376a-89f7-41ec-9894-\
+b4c024e779b1"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -548,9 +641,8 @@ Cell[TextData[Cell[BoxData[
    RowBox[{"P", "+", 
     RowBox[{
      FractionBox["1", "2"], "\[Rho]", " ", 
-     SuperscriptBox["u", "2"]}]}], "=", "constant"}], TraditionalForm]],
- FormatType->
-  TraditionalForm,ExpressionUUID->"ba793f0a-9926-4e2e-8cf0-5c73f4f1fbbb"]], \
+     SuperscriptBox["u", "2"]}]}], "=", "constant"}], 
+  TraditionalForm]],ExpressionUUID->"ba793f0a-9926-4e2e-8cf0-5c73f4f1fbbb"]], \
 "Text",
  CellChangeTimes->{{3.8576767870363393`*^9, 
   3.8576767981994877`*^9}},ExpressionUUID->"b76e95b4-3ba4-42cb-9f6b-\
@@ -3485,8 +3577,7 @@ Cell[TextData[{
  "No more heat can be added when ",
  Cell[BoxData[
   FormBox[
-   RowBox[{"M", "=", "1"}], TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
+   RowBox[{"M", "=", "1"}], TraditionalForm]],ExpressionUUID->
   "4f2b5860-eb8e-48b5-8fa5-628f280fb615"],
  ", to add more heat, the flow rate must be changed. As the flow rate \
 increases, the curve moves up and to the right:"
@@ -4087,9 +4178,7 @@ Cell[TextData[{
        RowBox[{
         SuperscriptBox[
          SubscriptBox["M", "1"], "2"], "-", "1"}], ")"}]}]}]}], 
-   TraditionalForm]],
-  FormatType->TraditionalForm,ExpressionUUID->
-  "e4bd91f9-c705-4b1f-92e1-1879d25249ae"]
+   TraditionalForm]],ExpressionUUID->"e4bd91f9-c705-4b1f-92e1-1879d25249ae"]
 }], "Text",
  CellChangeTimes->{
   3.855326691657469*^9, {3.8576758892957764`*^9, 
@@ -4520,7 +4609,8 @@ Cell[BoxData[
    RowBox[{
     SubscriptBox["S", "2"], "-", 
     SubscriptBox["S", "1"]}], "=", 
-   RowBox[{"-", 
+   RowBox[{
+    RowBox[{"-", "R"}], " ", 
     RowBox[{"log", "(", 
      FractionBox[
       SubscriptBox["P", 
@@ -4528,10 +4618,46 @@ Cell[BoxData[
       SubscriptBox["P", 
        RowBox[{"0", ",", "1"}]]], ")"}]}]}], TraditionalForm]], "Text",
  CellChangeTimes->{
-  3.855326691657469*^9, {3.857676583403328*^9, 
-   3.8576766105803394`*^9}},ExpressionUUID->"e41cfffd-edd7-4a5f-8c8c-\
+  3.855326691657469*^9, {3.857676583403328*^9, 3.8576766105803394`*^9}, {
+   3.857680148771113*^9, 
+   3.8576801492679377`*^9}},ExpressionUUID->"e41cfffd-edd7-4a5f-8c8c-\
 9886fe1142b7"]
 }, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Rankine Hugoniot Relations", "Subsection",
+ CellChangeTimes->{{3.8576801685786448`*^9, 
+  3.857680198929535*^9}},ExpressionUUID->"e96691aa-45ec-477b-9231-\
+8e5c52e87c71"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   FractionBox[
+    SubscriptBox["P", "2"], 
+    SubscriptBox["P", "1"]], "=", 
+   FractionBox[
+    RowBox[{
+     RowBox[{
+      FractionBox[
+       RowBox[{"\[Gamma]", "+", "1"}], 
+       RowBox[{"\[Gamma]", "-", "1"}]], 
+      FractionBox[
+       SubscriptBox["\[Rho]", "2"], 
+       SubscriptBox["\[Rho]", "1"]]}], "-", "1"}], 
+    RowBox[{
+     FractionBox[
+      RowBox[{"\[Gamma]", "+", "1"}], 
+      RowBox[{"\[Gamma]", "-", "1"}]], "-", 
+     FractionBox[
+      SubscriptBox["\[Rho]", "2"], 
+      SubscriptBox["\[Rho]", "1"]]}]]}], TraditionalForm]], "Input",
+ CellChangeTimes->{
+  3.855326691657469*^9, {3.857680273700917*^9, 
+   3.8576803256279984`*^9}},ExpressionUUID->"700cb87d-63a8-4f51-88f8-\
+eee77c34cf13"]
 }, Open  ]]
 }, Open  ]],
 
@@ -4727,8 +4853,8 @@ Cell[BoxData[
 }, Open  ]]
 },
 ShowPageBreaks->False,
-WindowSize->{718.5, 735.75},
-WindowMargins->{{-730.5, Automatic}, {Automatic, 0}},
+WindowSize->{516.8571428571428, 708.},
+WindowMargins->{{Automatic, -4.285714285714448}, {Automatic, 0}},
 PrintingCopies->1,
 PrintingStartingPageNumber->1,
 PrintingPageRange->{32000, 32000},
