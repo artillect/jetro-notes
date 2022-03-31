@@ -7059,11 +7059,10 @@ Cell["Prandtl-Meyer Function", "Subsection",
   3.857722543317089*^9}},ExpressionUUID->"336a366d-86b8-419a-ac7c-\
 2f49a2cdf3a1"],
 
-Cell["\<\
-Only applies to isentropic conditions (continuous curve or expansion waves)\
-\>", "Text",
- CellChangeTimes->{{3.857723024558564*^9, 
-  3.8577230443769913`*^9}},ExpressionUUID->"10999748-1a5b-4bd0-8c58-\
+Cell["Only applies for weak shock assumptions or expansion waves", "Text",
+ CellChangeTimes->{{3.857723024558564*^9, 3.8577230443769913`*^9}, {
+  3.857725448627081*^9, 
+  3.8577254662672024`*^9}},ExpressionUUID->"10999748-1a5b-4bd0-8c58-\
 5b3d79181d6c"],
 
 Cell[BoxData[
